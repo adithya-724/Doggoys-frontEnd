@@ -82,7 +82,7 @@ header #bar1 {
 
 .intro {
   height: 500px;
-  background: linear-gradient(to top right, #fff 60%, #dedcde);
+  background: linear-gradient(to top left, #fff 70%, #d8c9bb);
   padding: 15px 0;
 }
 .flex-item2 {
@@ -121,19 +121,20 @@ button i {
 }
 .parallaxImage .parabox {
   flex-basis: 50%;
-  margin-top: 50px;
+  margin: 40px;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 20px;
 }
 .parallaxImage h2 {
   font-size: 40px;
   position: relative;
   width: 100%;
-  text-shadow: 0px 3px 0px #bababa, 0px 14px 10px rgba(0, 0, 0, 0.15),
-    0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 .mating {
   height: 650px;
   padding: 30px;
-  background: linear-gradient(to bottom right, #fff 60%, #d8c9bb);
+  background: linear-gradient(to bottom right, #fff 70%, #d8c9bb);
 }
 h2::before {
   position: absolute;
@@ -168,6 +169,10 @@ h2::before {
   .parallaxImage {
     background-image: url(images/acc8.jpg);
   }
+  .parallaxImage .parabox {
+    flex-basis: 100%;
+  }
+
   header ul {
     display: none;
   }
@@ -176,6 +181,9 @@ h2::before {
   }
   .introBody {
     background-image: url(images/img4.jpg);
+  }
+  .mating {
+    height: auto;
   }
   .mating img {
     height: 100%;
