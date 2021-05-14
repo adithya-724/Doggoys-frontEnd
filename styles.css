@@ -10,6 +10,12 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.flex1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 header {
   display: flex;
   height: 100px;
@@ -132,7 +138,6 @@ button i {
   color: #fff;
 }
 .mating {
-  height: 650px;
   padding: 30px;
   background: linear-gradient(to bottom right, #fff 70%, #d8c9bb);
 }
@@ -143,20 +148,51 @@ h2::before {
   width: 50px;
   background-color: pink;
 }
-.mating img {
-  width: 600px;
-  height: 600px;
-  margin-left: 200px;
-}
 .relative {
   position: relative;
 }
-.flex-item2 #love {
-  position: absolute;
-  top: 10px;
-  right: 10%;
-  z-index: 10;
+.product .container {
+  background: radial-gradient(ellipse, #fff, rgba(0, 0, 0, 0.04));
+  border-radius: 30px;
 }
+.flex-item3 {
+  flex-basis: 33%;
+  padding: 20px;
+}
+.flex-item3 img {
+  height: 250px;
+}
+.flex-item3 h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product h2 {
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 20px;
+}
+.flex-item3 .customH4 {
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  padding: 1px;
+  font-size: 15px;
+  top: 32px;
+  z-index: 10;
+  color: #fff;
+}
+.flex-item3 .custom img {
+  height: 55px;
+  margin-top: 15px;
+}
+.custom {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.custom:hover {
+  transform: scale(1.15);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+}
+
 @media (max-width: 700px) {
   .flex-item1,
   .flex-item2,
