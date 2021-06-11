@@ -45,14 +45,20 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   </head>
   <body>
     <header>
       <div class="img1">
         <img src="images/logo.png" class="img1" alt="" />
       </div>
-      <div id="nav">
-        <ul>
+      <div>
+        <ul id="items">
           <li>HOME</li>
           <li>PRODUCTS</li>
           <li>SERVICES</li>
@@ -140,14 +146,14 @@
             </div>
           </div>
           <div class="flex-item3 flex1">
-            <img src="images/collar1.png" alt="" />
+            <img src="images/collar3.png" alt="" />
             <div class="custom relative flex1">
               <img src="images/bone.png" alt="" />
               <h3 class="customH4">COLLARS</h3>
             </div>
           </div>
           <div class="flex-item3 flex1">
-            <img src="images/groom1.png" alt="" />
+            <img src="images/shitzu.png" alt="" />
             <div class="custom relative flex1">
               <img src="images/bone.png" alt="" />
               <h3 class="customH4">GROOMING</h3>
@@ -168,12 +174,165 @@
             </div>
           </div>
         </div>
-        <br />
-        <br />
+      </div>
+    </div>
+    <div class="packages">
+      <h2 class="text-center">PACKAGES</h2>
+      <div class="swiper-container relative">
+        <div
+          class="parallax-bg"
+          style="background-image: url(images/pack8.jpg)"
+          data-swiper-parallax="-23%"
+        ></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide flex" data-swiper-parallax="-300">
+            <div class="flex1 slide">
+              <h3>
+                BASIC
+                <span
+                  ><img src="icons/trophy(1).png" alt="" class="package-image"
+                /></span>
+              </h3>
+              <ul class="list-unstyled text-center">
+                <li>
+                  WASHING
+                  <span
+                    ><img src="icons/bath.png" alt="" class="package-image1"
+                  /></span>
+                </li>
+                <li>
+                  BRUSHING<span
+                    ><img
+                      src="icons/pet-brush.png"
+                      alt=""
+                      class="package-image1"
+                  /></span>
+                </li>
+                <li>
+                  GROOMING<span
+                    ><img
+                      src="icons/pet-grooming.png"
+                      alt=""
+                      class="package-image1"
+                  /></span>
+                </li>
+                <li>
+                  NAIL CUTTING<span
+                    ><img
+                      src="icons/trimming.png"
+                      alt=""
+                      class="package-image1"
+                  /></span>
+                </li>
+                <li>
+                  PAW CLEANING<span
+                    ><img
+                      src="icons/pawprint.png"
+                      alt=""
+                      class="package-image1"
+                  /></span>
+                </li>
+              </ul>
+              <button class="button btn-lg">
+                ENQUIRE <i class="fa fa-phone"></i>
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide flex" data-swiper-parallax="-300">
+            <div class="flex1 slide">
+              <h3>
+                CLASSIC
+                <span
+                  ><img src="icons/trophy(2).png" alt="" class="package-image"
+                /></span>
+              </h3>
+              <ul class="list-unstyled">
+                <li>SERV 1</li>
+                <li>SERV 2</li>
+                <li>SERV 3</li>
+                <li>SERV 4</li>
+                <li>SERV 5</li>
+              </ul>
+              <button class="button btn-lg">
+                ENQUIRE <i class="fa fa-phone"></i>
+              </button>
+            </div>
+          </div>
+          <div class="swiper-slide flex" data-swiper-parallax="-300">
+            <div class="flex1 slide">
+              <h3>
+                PREMIUM
+                <span
+                  ><img src="icons/trophy(3).png" alt="" class="package-image"
+                /></span>
+              </h3>
+              <ul class="list-unstyled">
+                <li>SERV 1</li>
+                <li>SERV 2</li>
+                <li>SERV 3</li>
+                <li>SERV 4</li>
+                <li>SERV 5</li>
+              </ul>
+              <button class="button btn-lg">
+                ENQUIRE <i class="fa fa-phone"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination swiper-pagination-black"></div>
+
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+      </div>
+    </div>
+    <div class="trimming-zone flex1">
+      <h2 class="text-center">TRIMMING ZONE</h2>
+      <div class="container flex" id="trimZone">
+        <div class="flex1 flex-tem4">
+          <img src="trim/trim1before.png" id="trim1before" alt="" />
+          <img src="trim/trim1After.png" id="trim1" alt="" />
+        </div>
+        <div class="flex1 flex-item4 flex4one">
+          <img src="trim/trim2before.png" id="trim2before" alt="" />
+          <img src="trim/trim2after.png" id="trim2" alt="" />
+        </div>
+        <div class="flex1 flex-item4 flex4two">
+          <img src="trim/trim3before.png" id="trim3before" alt="" />
+          <img src="trim/trim3after.png" id="trim3" alt="" />
+        </div>
+        <div class="flex1 flex-item4">
+          <img src="trim/trim4before.png" id="trim4before" alt="" />
+          <img src="trim/trim4after.png" id="trim4" alt="" />
+        </div>
+      </div>
+      <div>
+        <button class="button btn-lg" id="trimButton">
+          Trim <i class="fa fa-cut"></i>
+        </button>
+        <button class="button btn-lg" id="resetButton">
+          RESET<i class="fa fa-power-off"></i>
+        </button>
       </div>
     </div>
     <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="bootstrap-5.0.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        speed: 600,
+        parallax: true,
+        autoplay: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>

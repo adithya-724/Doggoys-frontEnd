@@ -18,14 +18,18 @@
 }
 header {
   display: flex;
-  height: 100px;
+  height: 80px;
   color: #fff;
   background-color: #000000;
   align-items: center;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
 }
 header .img1 {
   height: 50px;
   margin-left: 10px;
+  flex: 1;
 }
 header ul {
   list-style: none;
@@ -35,8 +39,47 @@ header ul {
 }
 header ul li {
   display: inline-block;
-  margin: 10px;
+  margin: 15px;
   padding: 20px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+header ul li::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  border: 2px solid transparent;
+  bottom: 10px;
+  left: 1px;
+  box-sizing: border-box;
+}
+header ul li:hover::before {
+  height: 50px;
+  width: 100%;
+  border: 2px solid #fff;
+  border-right: none;
+  border-bottom: none;
+  transition: height 0.25s linear, width 0.25s linear 0.25s;
+}
+header ul li::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  border: 2px solid transparent;
+  top: 10px;
+  right: -1px;
+  box-sizing: border-box;
+}
+header ul li:hover::after {
+  height: 50px;
+  width: 100%;
+  border: 2px solid #cdb3a0;
+  border-left: none;
+  border-top: none;
+  transition: height 0.25s linear, width 0.25s linear 0.25s;
 }
 header #nav {
   flex: 1;
@@ -55,9 +98,19 @@ header .ham .bar {
 }
 header #bar2 {
   transform: translateY(10px);
+  transition: 0.4s ease all;
 }
 header #bar1 {
   transform: translateY(5px);
+  transition: 0.4s ease all;
+}
+.rotate #bar1 {
+  position: relative;
+  top: 2px;
+  transform: rotate(45deg);
+}
+.rotate #bar2 {
+  transform: rotate(-45deg);
 }
 .introBody {
   background-image: url(images/img11.jpg);
@@ -85,7 +138,9 @@ header #bar1 {
   margin-top: 20px;
   color: #fff;
 }
-
+.button:hover {
+  text-shadow: 0 0 10px yellow;
+}
 .intro {
   height: 500px;
   background: linear-gradient(to top left, #fff 70%, #d8c9bb);
@@ -96,11 +151,6 @@ header #bar1 {
 }
 .flex-item2 .img2 {
   height: 100%;
-}
-.flex-item2 h2 {
-  font-weight: bold;
-  font-size: 35px;
-  margin-bottom: 20px;
 }
 .flex-item2 p {
   text-align: justify;
@@ -166,7 +216,7 @@ h2::before {
   font-size: 20px;
   font-weight: bold;
 }
-.product h2 {
+h2 {
   font-weight: bold;
   font-size: 35px;
   margin-top: 20px;
@@ -190,14 +240,106 @@ h2::before {
 }
 .custom:hover {
   transform: scale(1.15);
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7);
+  text-shadow: 0px 0px 6px yellow;
 }
-
+.packages {
+  margin-top: 20px;
+}
+.package-image {
+  height: 25px;
+  position: relative;
+  top: -4px;
+  margin-left: 5px;
+}
+.package-image1 {
+  height: 30px;
+  position: relative;
+  top: -4px;
+  margin-left: 15px;
+}
+.swiper-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  height: 500px;
+}
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.swiper-slide {
+  padding: 40px;
+}
+.absolute {
+  position: absolute;
+}
+.swiper-slide .slide {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 500px;
+  border-radius: 10px;
+}
+.swiper-slide h3 {
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.95);
+  border-radius: 10px;
+}
+.swiper-slide li {
+  font-family: "Oswald", sans-serif;
+  font-size: 17px;
+  margin-top: 20px;
+  color: #000;
+  font-weight: bold;
+}
+.swiper-slide button {
+  margin-bottom: 10px;
+}
+.trimming-zone {
+  margin-top: 20px;
+  background: linear-gradient(to bottom, #fff 85%, #a2a2a2);
+}
+.trimming-zone img {
+  height: 300px;
+}
+.flex-item4 {
+  flex-basis: 25%;
+}
+.trimming-zone #trim1,
+#trim2,
+#trim3,
+#trim4 {
+  height: 0px;
+}
+.trimming-zone button:nth-child(2) {
+  margin: 20px 25px;
+}
+.display {
+  transition: all 0.6s ease;
+  height: 90vh;
+}
 @media (max-width: 700px) {
   .flex-item1,
   .flex-item2,
+  .flex-item3,
   .parabox {
     flex-basis: 100%;
+  }
+  .trimming-zone .flex4one,
+  .flex4two {
+    display: none;
+  }
+  header ul li:hover::before {
+    display: none;
+  }
+  header ul li:hover::after {
+    display: none;
   }
   .intro {
     height: 700px;
@@ -210,7 +352,29 @@ h2::before {
   }
 
   header ul {
-    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top: 50px;
+    left: -30px;
+    width: 100%;
+    overflow: hidden;
+    height: 0px;
+    transition: height 0.6s ease;
+  }
+  header ul li {
+    display: block;
+    font-size: 25px;
+    margin: 60px;
+    color: black;
+    width: 100px;
+    padding: 10px;
+    position: relative;
+    left: 25vw;
+    text-align: center;
+  }
+  header ul li:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease all;
   }
   header .ham {
     display: block;
@@ -225,5 +389,11 @@ h2::before {
     height: 100%;
     width: 90%;
     margin-left: 0;
+  }
+  .swiper-button-prev {
+    opacity: 0;
+  }
+  .swiper-button-next {
+    opacity: 0;
   }
 }
