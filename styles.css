@@ -295,20 +295,9 @@ h2 {
   top: -4px;
   margin-left: 15px;
 }
-.swiper-container {
-  margin: 0 auto;
-  max-width: 40%;
+.swiper {
+  max-width: 50%;
   height: 500px;
-}
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
 }
 .swiper-slide {
   padding: 40px;
@@ -344,6 +333,15 @@ h2 {
 }
 .swiper-slide button {
   margin-bottom: 10px;
+}
+#slide1 {
+  background: radial-gradient(pink, white);
+}
+#slide2 {
+  background: radial-gradient(#2d76b9, white);
+}
+#slide3 {
+  background: radial-gradient(#dc9760, white);
 }
 .trimming-zone {
   margin-top: 20px;
@@ -465,10 +463,14 @@ h2 {
     width: 90%;
     margin-left: 0;
   }
-  .swiper-button-prev {
-    opacity: 0;
+  .packages .swiper {
+    max-width: 100%;
+    height: 500px;
   }
   .swiper-button-next {
+    opacity: 0;
+  }
+  .swiper-button-prev {
     opacity: 0;
   }
 }
