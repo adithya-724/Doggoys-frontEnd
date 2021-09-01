@@ -142,9 +142,26 @@ header #bar1 {
   text-shadow: 0 0 10px yellow;
 }
 .intro {
-  height: 500px;
   background: linear-gradient(to top left, #fff 70%, #d8c9bb);
   padding: 15px 0;
+  z-index: 10;
+  width: 100%;
+  position: relative;
+}
+.intro::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+  transform-origin: bottom left;
+  transform: skewY(0.7deg);
 }
 .flex-item2 {
   flex-basis: 50%;
@@ -171,6 +188,9 @@ header #bar1 {
   background-image: url(images/img18.jpg);
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 button i {
   margin-left: 10px;
@@ -190,6 +210,24 @@ button i {
 .mating {
   padding: 30px;
   background: linear-gradient(to bottom right, #fff 70%, #d8c9bb);
+  position: relative;
+  width: 100%;
+  z-index: 50;
+}
+.mating:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+  transform-origin: top right;
+  transform: skewY(1deg);
 }
 h2::before {
   position: absolute;
@@ -259,7 +297,7 @@ h2 {
 }
 .swiper-container {
   margin: 0 auto;
-  max-width: 1100px;
+  max-width: 40%;
   height: 500px;
 }
 .parallax-bg {
@@ -274,6 +312,9 @@ h2 {
 }
 .swiper-slide {
   padding: 40px;
+}
+.carousel-control-prev {
+  color: #000;
 }
 .absolute {
   position: absolute;
@@ -298,12 +339,15 @@ h2 {
   color: #000;
   font-weight: bold;
 }
+.feedbacks .swiper-slide .img {
+  height: 150px;
+}
 .swiper-slide button {
   margin-bottom: 10px;
 }
 .trimming-zone {
   margin-top: 20px;
-  background: linear-gradient(to bottom, #fff 85%, #a2a2a2);
+  background: radial-gradient(#fff 50%, #dbcdc0);
 }
 .trimming-zone img {
   height: 300px;
@@ -324,6 +368,38 @@ h2 {
   transition: all 0.6s ease;
   height: 90vh;
 }
+.fa-star,
+.fa-star-o,
+.fa-star-half-empty {
+  color: #d78b52;
+}
+.fa.fa-quote-left {
+  color: #d78b52;
+  font-size: 25px;
+}
+.feedbacks .flex-item3:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease all;
+  cursor: pointer;
+}
+.feedbacks .flex-item3 {
+  padding: 20px;
+  margin: 5px;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.footer {
+  margin-top: 20px;
+  height: 150px;
+  background-color: black;
+}
+.footer p {
+  color: #fff;
+  padding-top: 50px;
+  font-size: 30px;
+  text-align: center;
+}
 @media (max-width: 700px) {
   .flex-item1,
   .flex-item2,
@@ -341,11 +417,9 @@ h2 {
   header ul li:hover::after {
     display: none;
   }
-  .intro {
-    height: 700px;
-  }
   .parallaxImage {
     background-image: url(images/acc8.jpg);
+    z-index: 9;
   }
   .parallaxImage .parabox {
     flex-basis: 100%;
@@ -384,6 +458,7 @@ h2 {
   }
   .mating {
     height: auto;
+    z-index: 6;
   }
   .mating img {
     height: 100%;
