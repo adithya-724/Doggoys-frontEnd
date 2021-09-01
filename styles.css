@@ -398,6 +398,9 @@ h2 {
   font-size: 30px;
   text-align: center;
 }
+#copyrightIcon {
+  margin-left: 20px;
+}
 @media (max-width: 700px) {
   .flex-item1,
   .flex-item2,
