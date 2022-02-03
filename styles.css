@@ -334,18 +334,13 @@ h2 {
 .swiper-slide button {
   margin-bottom: 10px;
 }
-#slide1 {
+.slide {
   background: radial-gradient(pink, white);
-}
-#slide2 {
-  background: radial-gradient(#2d76b9, white);
-}
-#slide3 {
-  background: radial-gradient(#dc9760, white);
 }
 .trimming-zone {
   margin-top: 20px;
   background: radial-gradient(#fff 50%, #dbcdc0);
+  padding: 20px;
 }
 .trimming-zone img {
   height: 300px;
@@ -388,7 +383,6 @@ h2 {
   cursor: pointer;
 }
 .footer {
-  margin-top: 20px;
   height: 150px;
   background-color: black;
 }
@@ -470,10 +464,8 @@ h2 {
     max-width: 100%;
     height: 500px;
   }
-  .swiper-button-next {
-    opacity: 0;
-  }
+  .swiper-button-next,
   .swiper-button-prev {
-    opacity: 0;
+    opacity: 0 !important;
   }
 }
