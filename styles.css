@@ -25,6 +25,7 @@ header {
   z-index: 100;
   position: fixed;
   width: 100%;
+  transition: all 0.4s ease-in;
 }
 header .img1 {
   height: 50px;
@@ -103,6 +104,13 @@ header #bar2 {
 header #bar1 {
   transform: translateY(5px);
   transition: 0.4s ease all;
+}
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+  box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.2);
 }
 .rotate #bar1 {
   position: relative;
@@ -244,7 +252,7 @@ h2::before {
   border-radius: 30px;
 }
 .flex-item3 {
-  flex-basis: 33%;
+  flex-basis: 30%;
   padding: 20px;
 }
 .flex-item3 img {
@@ -346,7 +354,7 @@ h2 {
   height: 300px;
 }
 .flex-item4 {
-  flex-basis: 25%;
+  flex-basis: 20%;
 }
 .trimming-zone #trim1,
 #trim2,
@@ -429,6 +437,10 @@ h2 {
     overflow: hidden;
     height: 0px;
     transition: height 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   header ul li {
     display: block;
@@ -437,8 +449,6 @@ h2 {
     color: black;
     width: 100px;
     padding: 10px;
-    position: relative;
-    left: 25vw;
     text-align: center;
   }
   header ul li:hover {
